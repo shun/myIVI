@@ -1,16 +1,16 @@
 #include <QCoreApplication>
 #include <QDBusConnection>
-#include "hmiDiag.h"
+#include "HmiDiag.h"
 
 int main(int argc, char* argv[])
 {
     QCoreApplication app(argc, argv);
 
     QObject obj;
-	hmiDiag hmi(&obj);
+	HmiDiag hmi(&obj);
     QDBusConnection::sessionBus().registerObject("/", &obj);
 
-    if (!QDBusConnection::sessionBus().registerService("sk.si.hmiDiag"))
+    if (!QDBusConnection::sessionBus().registerService("sk.si.HmiDiag"))
 	{
         qDebug("%s\n",
         		"");

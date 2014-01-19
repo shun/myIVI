@@ -27,14 +27,14 @@ SET(OUTPUTNAME "hmiDiag")
 
 SET(SRC_FILES
 	main.cpp
-	hmiDiag.cpp
+	HmiDiag.cpp
 	# TODO : generate below cpp files automatically
 	LocationServiceSvcInterface.cpp
 	LocationServiceProxy.cpp
 )
 
 SET(HDR_FILES
-	../inc/hmiDiag.h
+	../inc/HmiDiag.h
 	# TODO : generate below h files automatically
 	../inc/LocationServiceSvcInterface.h
 	../inc/LocationServiceSIImpl.h
