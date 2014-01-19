@@ -1,5 +1,6 @@
 #pragma once
 #include "BaseHMI.h"
+#include "LocationServiceProxy.h"
 
 class hmiDiag : public BaseHMI
 {
@@ -14,7 +15,11 @@ public :
  * adaptor for ServiceInterface
  */
 public slots:
-	void showApp(bool show);
-	void showHMI(bool show);
+	virtual void showApp(bool show);
+	virtual void showHMI(bool show);
+	void test();
+
+private :
+	LocationServiceProxy *m_proxy;
 };
 

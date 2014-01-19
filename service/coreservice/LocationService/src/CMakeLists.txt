@@ -10,7 +10,6 @@ set(QT_USE_QTDBUS true)
 INCLUDE_DIRECTORIES(
     ../inc
 	${CMAKE_SOURCE_DIR}/si/inc
-	${CMAKE_SOURCE_DIR}/hmi/hmiBase/inc
     /usr/local/include
 )
 
@@ -22,27 +21,18 @@ LINK_LIBRARIES(
   )
 
 #----------------------------------------------------------------                                          
-SET(OUTPUTNAME "hmiDiag")
+SET(OUTPUTNAME "LocationService")
 
 
 SET(SRC_FILES
 	main.cpp
-	hmiDiag.cpp
-	# TODO : generate below cpp files automatically
-	LocationServiceSvcInterface.cpp
-	LocationServiceProxy.cpp
+	LocationService.cpp
 )
 
 SET(HDR_FILES
-	../inc/hmiDiag.h
-	# TODO : generate below h files automatically
-	../inc/LocationServiceSvcInterface.h
-	../inc/LocationServiceSIImpl.h
-	../inc/LocationServiceProxy.h
-	${CMAKE_SOURCE_DIR}/hmi/hmiBase/inc/BaseHMI.h
-	${CMAKE_SOURCE_DIR}/hmi/hmiBase/inc/BaseHMIListener.h
+	../inc/LocationService.h
+	../inc/LocationServiceListener.h
 	${CMAKE_SOURCE_DIR}/si/inc/SIProtocolAdaptor.h
-	${CMAKE_SOURCE_DIR}/si/inc/SIProtocolProxy.h
 )
 
 include(${QT_USE_FILE})
