@@ -10,15 +10,13 @@ public :
 	HmiDiag(QObject *obj);
 	virtual ~HmiDiag();
 
+private :
+	LocationServiceProxy *m_proxy;
 /****************************************************
  *
  * adaptor for ServiceInterface
  */
 public slots:
-	virtual void showApp(bool show);
 	virtual void showHMI(bool show);
-
-private :
-	LocationServiceProxy *m_proxy;
 };
 

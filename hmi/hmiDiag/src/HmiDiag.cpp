@@ -14,10 +14,6 @@ HmiDiag::~HmiDiag()
 	}
 }
 
-void HmiDiag::showApp(bool show)
-{
-}
-
 void HmiDiag::showHMI(bool show)
 {
 }

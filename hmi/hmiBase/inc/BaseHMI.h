@@ -8,5 +8,11 @@ class BaseHMI : public BaseHMIListener
 public :
 	BaseHMI(QObject *obj) : BaseHMIListener(obj){};
 	virtual ~BaseHMI(){};
+/****************************************************
+ *
+ * adaptor for ServiceInterface
+ */
+public slots:
+	virtual void showApp(bool show){};
 };
 
